@@ -1,9 +1,11 @@
 'use client';
+import Footer from "@/components/Footer/Footer";
 
-export default function HomePage () {
+export default function AboutUsPage () {
     return (
         <div>
-            <h1>Index</h1>
+            <h1>About Us Page</h1>
+            <Footer />
         </div>
     );
 }
