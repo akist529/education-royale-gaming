@@ -44,7 +44,11 @@ export default function AboutUsPage () {
                 textAlign='center'
                 py={5}
             >About Us</Heading>
-            <Divider />
+            <Divider
+                colorScheme='red'
+                size='20'
+                variant='dashed'
+            />
             <Box
                 px={width < 600 ? 5 : 24}
                 mx={width < 600 ? 5 : 24}

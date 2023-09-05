@@ -1,5 +1,6 @@
 'use client';
 import { Flex, HStack, VStack, Image, Link, Button, IconButton, Text } from '@chakra-ui/react';
+import { Menu, MenuList, MenuButton, MenuItem, MenuGroup, MenuDivider, MenuOptionGroup, MenuItemOption } from '@chakra-ui/react';
 import { chakra, useColorMode } from '@chakra-ui/react';
 import LogoLight from '../../../public/images/logo-light.png';
 import LogoDark from '../../../public/images/logo-dark.png';
@@ -61,20 +62,34 @@ export default function NavBar () {
                             </VStack>
                         </Button>
                     </Link>
-                    <Link
-                        as={NextLink}
-                        href='/mathjack'
-                        color={router.pathname === '/mathjack' ? 'red.500' : ''}
-                    >
-                        <Button
+                    <Menu>
+                        <MenuButton
+                            as={Button}
+                            color={router.pathname.split('/').includes('games') ? 'red.500' : ''}
                             variant='nav'
                         >
                             <VStack>
                                 <CgGames size={26} />
                                 <Text>Games</Text>
                             </VStack>
-                        </Button>
-                    </Link>
+                        </MenuButton>
+                        <MenuList>
+                            <Link
+                                as={NextLink}
+                                href='/games/mathjack'
+                                color={router.pathname === '/games/mathjack' ? 'red.500' : ''}
+                            >
+                                <Button
+                                    variant='nav'
+                                >
+                                    <HStack>
+                                        <CgGames size={26} />
+                                        <Text>MathJack©</Text>
+                                    </HStack>
+                                </Button>
+                            </Link>
+                        </MenuList>
+                    </Menu>
                     <Link
                         as={NextLink}
                         href='/contact'
