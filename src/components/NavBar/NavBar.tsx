@@ -1,5 +1,6 @@
 'use client';
-import { Box, Flex, HStack, VStack, Image, Link, Button, IconButton, Text, chakra, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Flex, HStack, VStack, Image, Link, Button, IconButton, Text } from '@chakra-ui/react';
+import { chakra, useColorMode } from '@chakra-ui/react';
 import LogoLight from '../../../public/images/logo-light.png';
 import LogoDark from '../../../public/images/logo-dark.png';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
@@ -15,7 +16,17 @@ export default function NavBar () {
     const router = useRouter();
 
     return (
-        <chakra.header id='header'>
+        <chakra.header
+            id='header'
+            pb={1}
+            position='fixed'
+            zIndex={999}
+            left={0}
+            right={0}
+            top={0}
+            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+            opacity={0.8}
+        >
             <Flex
                 w='100%'
                 px={{ base: 1, md: 6 }}
@@ -60,7 +71,7 @@ export default function NavBar () {
                         >
                             <VStack>
                                 <CgGames size={26} />
-                                <Text>MathJack ©</Text>
+                                <Text>Games</Text>
                             </VStack>
                         </Button>
                     </Link>

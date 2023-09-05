@@ -14,7 +14,9 @@ export default function MobileDrawer () {
     const { colorMode, toggleColorMode } = useColorMode();
 
     return (
-        <Flex>
+        <Flex
+            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+        >
             <IconButton
                 ref={btnRef}
                 variant='ghost'
@@ -57,7 +59,10 @@ export default function MobileDrawer () {
                         </Link>
                     </DrawerHeader>
                     <DrawerBody w='100%'>
-                        <VStack as='nav' spacing={5}>
+                        <VStack
+                            as='nav'
+                            spacing={5}
+                        >
                             <Text>Navigation</Text>
                             <Link
                                 as={NextLink}
