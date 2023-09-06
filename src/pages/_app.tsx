@@ -1,14 +1,21 @@
-import { ChakraProvider } from '@chakra-ui/react';
 import NavBar from '@/components/NavBar/NavBar';
 import theme from '@/theme';
+import { AnimatePresence } from 'framer-motion';
+import { ChakraProvider } from '@chakra-ui/react';
 
-function MyApp({ Component, pageProps }: any) {
+export default function MyApp({ Component, pageProps }: any) {
+
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider
+      theme={theme}
+    >
       <NavBar />
-      <Component {...pageProps} />
+      <AnimatePresence
+        mode='wait'
+        initial={false}
+      >
+        <Component {...pageProps} />
+      </AnimatePresence>
     </ChakraProvider>
   );
 }
-
-export default MyApp;

@@ -17,7 +17,7 @@ export default function NavBar () {
     const router = useRouter();
 
     return (
-        <chakra.header
+        <chakra.nav
             id='header'
             pb={1}
             position='fixed'
@@ -26,7 +26,7 @@ export default function NavBar () {
             right={0}
             top={0}
             backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
-            opacity={0.8}
+            opacity={0.9}
         >
             <Flex
                 w='100%'
@@ -202,6 +202,6 @@ export default function NavBar () {
                     </Link>
                 </HStack>
             </Flex>
-        </chakra.header>
+        </chakra.nav>
     )
 }
