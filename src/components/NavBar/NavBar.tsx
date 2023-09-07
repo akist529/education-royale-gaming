@@ -11,6 +11,8 @@ import { CgGames } from 'react-icons/cg';
 import NextLink from 'next/link';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
+import { PiMathOperationsFill } from 'react-icons/pi';
+import styles from '@/styles/Index.module.scss';
 
 export default function NavBar () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -55,6 +57,7 @@ export default function NavBar () {
                     >
                         <Button
                             variant='nav'
+                            className={styles.navLink}
                         >
                             <VStack>
                                 <MdInfo size={26} />
@@ -67,6 +70,7 @@ export default function NavBar () {
                             as={Button}
                             color={router.pathname.split('/').includes('games') ? 'red.500' : ''}
                             variant='nav'
+                            className={styles.navLink}
                         >
                             <VStack>
                                 <CgGames size={26} />
@@ -81,10 +85,11 @@ export default function NavBar () {
                             >
                                 <Button
                                     variant='nav'
+                                    className={styles.navLink}
                                 >
                                     <HStack>
-                                        <CgGames size={26} />
-                                        <Text>MathJack©</Text>
+                                        <PiMathOperationsFill size={26} />
+                                        <Text>MathJack ©</Text>
                                     </HStack>
                                 </Button>
                             </Link>
@@ -97,6 +102,7 @@ export default function NavBar () {
                     >
                         <Button
                             variant='nav'
+                            className={styles.navLink}
                         >
                             <VStack>
                                 <MdContactSupport size={26} />

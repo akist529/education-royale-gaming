@@ -19,6 +19,12 @@
     align-items: center;
 }
 
+.navLink {
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
 @media only screen and (min-width: 992px) {
     .parallax {
         height: 500px;

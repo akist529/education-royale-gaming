@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import Footer from "@/components/Footer/Footer";
-import { Heading, Text, Divider, Box, Card, CardBody, chakra } from '@chakra-ui/react';
+import { Heading, VStack, Text, Divider, Box, Card, CardBody, chakra } from '@chakra-ui/react';
 import { useColorMode } from "@chakra-ui/react";
 import Image1 from '../../public/images/index-img1.jpg';
 import Image2 from '../../public/images/index-img2.jpg';
@@ -80,17 +80,23 @@ export default function AboutUsPage () {
                 <TextCard
                     text='We invite you to become a part of our growing community. Whether you&apos;re a parent seeking new ways to engage your child, a teacher aiming to bring excitement to your classroom, or simply a board game aficionado, there&apos;s a place for you at Education Royale Gaming. Share your experiences, offer suggestions, and connect with like-minded individuals.'
                 />
-                <Box
+                <VStack
                     px={20}
                     pb={10} 
                 >
                     <Text
                         fontFamily='Roboto Condensed'
+                        fontSize='5xl'
+                        fontWeight='700'
+                        textAlign='center'                    
+                    >Thank you for choosing Education Royale Gaming.</Text>
+                    <Text
+                        fontFamily='Roboto Condensed'
                         fontSize='2xl'
                         fontWeight='700'
                         textAlign='center'                    
-                    >Thank you for choosing Education Royale Gaming. Let&apos;s roll the dice and embark on a journey of endless learning together!</Text>
-                </Box>
+                    >Let&apos;s roll the dice and embark on a journey of endless learning together!</Text>
+                </VStack>
                 <Footer />
             </chakra.main>
         </Layout>

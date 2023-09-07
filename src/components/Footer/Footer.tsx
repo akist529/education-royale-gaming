@@ -1,8 +1,22 @@
-import { Text, chakra, useColorMode, Flex, Heading, Spacer, Box, Link, IconButton, Divider } from "@chakra-ui/react";
+import { HStack, Text, chakra, useColorMode, Flex, Heading, Spacer, Box, Link, IconButton, Divider } from "@chakra-ui/react";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { useState, useEffect } from 'react';
 
 export default function Footer () {
     const { colorMode, toggleColorMode } = useColorMode();
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        if (window) {
+            setWidth(window.innerWidth);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+    }, []);
 
     return (
         <chakra.footer
@@ -17,63 +31,57 @@ export default function Footer () {
                 size='20'
                 variant='dashed'
             />
-            <chakra.div
-                mx={24}
-                px={24}
-                py={6}
-            >
-                <Flex justify='center' align='center'>
-                    <Heading>Connect With Us</Heading>
-                    <Spacer />
-                    <Box>
-                        <Link
-                            href='https://www.facebook.com/'
-                            isExternal
-                        >
-                            <IconButton
-                                variant='ghost'
-                                aria-label='Facebook'
-                                icon={<FaFacebookSquare size={26} />}
-                                isRound
-                            />
-                        </Link>
-                        <Link
-                            href='https://twitter.com/'
-                            isExternal
-                        >
-                            <IconButton
-                                variant='ghost'
-                                aria-label='Twitter'
-                                icon={<FaTwitterSquare size={26} />}
-                                isRound
-                            />
-                        </Link>
-                        <Link
-                            href='https://www.instagram.com/'
-                            isExternal
-                        >
-                            <IconButton
-                                variant='ghost'
-                                aria-label='Instagram'
-                                icon={<FaInstagramSquare size={26} />}
-                                isRound
-                            />
-                        </Link>
-                        <Link
-                            href='https://www.linkedin.com/'
-                            isExternal
-                        >
-                            <IconButton
-                                variant='ghost'
-                                aria-label='LinkedIn'
-                                icon={<FaLinkedin size={26} />}
-                                isRound
-                            />
-                        </Link>
-                    </Box>
-                </Flex>
-            </chakra.div>
-            <Text>Copyright © 2023 Education Royale Gaming. All Rights Reserved.</Text>
+            <HStack maxWidth={600} mx='auto' py={6} justify='center' align='center'>
+                { width >= 380 && <Heading>Connect With Us</Heading> }
+                { width >= 380 && <Spacer /> }
+                <HStack>
+                    <Link
+                        href='https://www.facebook.com/'
+                        isExternal
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='Facebook'
+                            icon={<FaFacebookSquare size={26} />}
+                            isRound
+                        />
+                    </Link>
+                    <Link
+                        href='https://twitter.com/'
+                        isExternal
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='Twitter'
+                            icon={<FaTwitterSquare size={26} />}
+                            isRound
+                        />
+                    </Link>
+                    <Link
+                        href='https://www.instagram.com/'
+                        isExternal
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='Instagram'
+                            icon={<FaInstagramSquare size={26} />}
+                            isRound
+                        />
+                    </Link>
+                    <Link
+                        href='https://www.linkedin.com/'
+                        isExternal
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='LinkedIn'
+                            icon={<FaLinkedin size={26} />}
+                            isRound
+                        />
+                    </Link>
+                </HStack>
+            </HStack>
+            <Text>Copyright © { new Date().getFullYear() } Education Royale Gaming. All Rights Reserved.</Text>
         </chakra.footer>
     );
 }
