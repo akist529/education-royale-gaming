@@ -81,12 +81,12 @@ export default function AboutUsPage () {
                     text='We invite you to become a part of our growing community. Whether you&apos;re a parent seeking new ways to engage your child, a teacher aiming to bring excitement to your classroom, or simply a board game aficionado, there&apos;s a place for you at Education Royale Gaming. Share your experiences, offer suggestions, and connect with like-minded individuals.'
                 />
                 <VStack
-                    px={20}
+                    px={2}
                     pb={10} 
                 >
                     <Text
                         fontFamily='Roboto Condensed'
-                        fontSize='5xl'
+                        fontSize='3xl'
                         fontWeight='700'
                         textAlign='center'                    
                     >Thank you for choosing Education Royale Gaming.</Text>

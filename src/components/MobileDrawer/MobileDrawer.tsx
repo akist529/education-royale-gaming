@@ -77,14 +77,14 @@ export default function MobileDrawer () {
                                     colorScheme='red.500'
                                 >About Us</Button>
                             </Link>
-                            <Link as={NextLink} href='/mathjack' w='100%'>
+                            <Link as={NextLink} href='/games/mathjack' w='100%'>
                                 <Button
                                     leftIcon={<CgGames size={26} />}
                                     variant='nav'
                                     onClick={onClose}
                                 >MathJack ©</Button>
                             </Link>
-                            <Link as={NextLink} href='/investors' w='100%'>
+                            <Link as={NextLink} href='/contact' w='100%'>
                                 <Button
                                     leftIcon={<MdContactSupport size={26} />}
                                     variant='nav'
