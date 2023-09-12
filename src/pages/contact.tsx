@@ -44,17 +44,10 @@ export default function ContactPage () {
                     <Divider variant='dashed' />
                     { /* Photo by Yannis H on Unsplash */ }
                     <Box
-                        className={styles.parallax}
+                        className={colorMode === 'dark' ? [styles.parallax, styles.dark].join(' ') : [styles.parallax, styles.light].join(' ')}
                         style={{ backgroundImage: `url(${ContactImage.src})` }}
-                        position='relative'
-                        zIndex='997'
-                    ></Box>
-                    <Box
-                        position='absolute'
-                        zIndex='998'
-                        left='50%'
-                        transform='translateX(-50%) translateY(50%)'
-                        bottom='50%'
+                        h='100%'
+                        py={3}
                     >
                         <VStack>
                             <Box
@@ -83,7 +76,10 @@ export default function ContactPage () {
                                     wordBreak='break-word'
                                 >For investors seeking long-term growth in education</Heading>
                             </Box>
-                            <Box>
+                            <Box
+                                w='95vw'
+                                maxW={600}
+                            >
                                 <Flex
                                     direction={width < 720 ? 'column' : 'row'}
                                     justify='center'
@@ -102,7 +98,6 @@ export default function ContactPage () {
                                         justifyContent='center'
                                         alignItems='center'
                                         gap='5px'
-                                        w={300}
                                         mx='auto'
                                         p={4}
                                         opacity={1}
@@ -158,10 +153,11 @@ export default function ContactPage () {
                                         direction='column'
                                         justify='space-between'
                                         align='center'
+                                        mt={3}
                                     >
                                         <VStack>
                                             <Grid
-                                                gridTemplateColumns={'48px 1fr'}
+                                                gridTemplateColumns={width >= 380 ? '48px 1fr' : '1fr'}
                                                 alignItems='center'
                                                 w='100%'
                                             >
@@ -174,14 +170,17 @@ export default function ContactPage () {
                                                     </Box>
                                                 </GridItem>
                                                 <GridItem>
-                                                    <VStack justifyContent='center' alignItems='start'>
+                                                    <VStack
+                                                        justifyContent='center'
+                                                        alignItems={width >= 380 ? 'start' : 'center'}
+                                                    >
                                                         <Text fontWeight={700}>Education Royale Gaming</Text>
                                                         <Text>Chicago, IL</Text>
                                                     </VStack>
                                                 </GridItem>
                                             </Grid>
                                             <Grid
-                                                gridTemplateColumns={'48px 1fr'}
+                                                gridTemplateColumns={width >= 380 ? '48px 1fr' : '1fr'}
                                                 alignItems='center'
                                                 w='100%'
                                             >
@@ -200,8 +199,8 @@ export default function ContactPage () {
                                                 </GridItem>
                                             </Grid>
                                             <Grid
-                                                gridTemplateColumns={'48px 1fr'}
-                                                alignItems='center'
+                                                gridTemplateColumns={width >= 380 ? '48px 1fr' : '1fr'}
+                                                alignItems={width >= 380 ? 'start' : 'center'}
                                                 w='100%'
                                             >
                                                 <GridItem justifySelf='center'>
@@ -212,7 +211,9 @@ export default function ContactPage () {
                                                         <BsPhoneFill size={26} />
                                                     </Box>
                                                 </GridItem>
-                                                <GridItem>
+                                                <GridItem
+                                                    textAlign={width >= 380 ? 'start' : 'center'}
+                                                >
                                                     <Link
                                                         href='tel:6306599981'
                                                     >630.659.9981</Link>

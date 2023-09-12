@@ -12,7 +12,7 @@ export default function ParallaxHeader (props: { img: string, heading: string })
         >
             <Divider variant='dashed' />
             <Box
-                className={styles.parallax}
+                className={colorMode === 'dark' ? [styles.parallax, styles.dark].join(' ') : [styles.parallax, styles.light].join(' ')}
                 style={{ backgroundImage: `url(${img})` }}
                 position='relative'
                 zIndex='997'
