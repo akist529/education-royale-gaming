@@ -1,6 +1,7 @@
 import { HStack, Text, chakra, useColorMode, Flex, Heading, Spacer, Box, Link, IconButton, Divider } from "@chakra-ui/react";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from 'react';
+import { ImMail } from "react-icons/im";
 
 export default function Footer () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -76,6 +77,16 @@ export default function Footer () {
                             variant='ghost'
                             aria-label='LinkedIn'
                             icon={<FaLinkedin size={26} />}
+                            isRound
+                        />
+                    </Link>
+                    <Link
+                        href='mailto:jblackburn@educationroyalegaming.com'
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='Email'
+                            icon={<ImMail size={23} />}
                             isRound
                         />
                     </Link>

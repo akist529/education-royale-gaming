@@ -13,6 +13,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
 import { PiMathOperationsFill } from 'react-icons/pi';
 import styles from '@/styles/Index.module.scss';
+import { ImMail } from "react-icons/im";
 
 export default function NavBar () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -203,6 +204,16 @@ export default function NavBar () {
                             variant='ghost'
                             aria-label='LinkedIn'
                             icon={<FaLinkedin size={26} />}
+                            isRound
+                        />
+                    </Link>
+                    <Link
+                        href='mailto:jblackburn@educationroyalegaming.com'
+                    >
+                        <IconButton
+                            variant='ghost'
+                            aria-label='Email'
+                            icon={<ImMail size={23} />}
                             isRound
                         />
                     </Link>

@@ -8,6 +8,7 @@ import { MdLocationOn, MdSend, MdEmail } from "react-icons/md";
 import { BsPhoneFill } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { ImMail } from "react-icons/im";
 
 export default function ContactPage () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -265,6 +266,16 @@ export default function ContactPage () {
                                                     variant='ghost'
                                                     aria-label='LinkedIn'
                                                     icon={<FaLinkedin size={26} />}
+                                                    isRound
+                                                />
+                                            </Link>
+                                            <Link
+                                                href='mailto:jblackburn@educationroyalegaming.com'
+                                            >
+                                                <IconButton
+                                                    variant='ghost'
+                                                    aria-label='Email'
+                                                    icon={<ImMail size={23} />}
                                                     isRound
                                                 />
                                             </Link>

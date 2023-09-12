@@ -8,6 +8,7 @@ export default class Document extends NextDocument {
       <Html lang='en'>
         <Head>
           <script src="https://web3forms.com/client/script.js" async defer></script>
+          <link rel='icon' href='/favicon.ico' sizes='any' />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
