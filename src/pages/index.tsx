@@ -86,15 +86,20 @@ export default function AboutUsPage () {
                 >
                     <Text
                         fontFamily='Roboto Condensed'
-                        fontSize='3xl'
-                        fontWeight='700'
-                        textAlign='center'                    
+                        fontSize='2xl'
+                        fontWeight='800'
+                        textAlign='center'
+                        letterSpacing={1}
+                        { ...width >= 480 && { fontSize: '4xl' } }
+                        { ...width >= 768 && { fontSize: '6xl' } }
                     >Thank you for choosing Education Royale Gaming.</Text>
                     <Text
                         fontFamily='Roboto Condensed'
-                        fontSize='2xl'
-                        fontWeight='700'
-                        textAlign='center'                    
+                        fontSize='xl'
+                        fontWeight='300'
+                        textAlign='center'
+                        { ...width >= 480 && { fontSize: '2xl' } }
+                        { ...width >= 768 && { fontSize: '3xl' } }
                     >Let&apos;s roll the dice and embark on a journey of endless learning together!</Text>
                 </VStack>
                 <Footer />

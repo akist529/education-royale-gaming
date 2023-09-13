@@ -161,7 +161,7 @@ export default function NavBar () {
                 </HStack>
                 <HStack
                     spacing='0'
-                    display={{ base: 'none', sm: 'flex' }}
+                    display={{ base: 'none', md: 'flex' }}
                 >
                     <Link
                         href='https://www.facebook.com/'

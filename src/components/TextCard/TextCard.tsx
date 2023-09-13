@@ -1,8 +1,22 @@
 import { Box, Card, CardBody, Text, useColorMode } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
 
 export default function TextCard (props: { text: string }) {
     const { text } = props;
     const { colorMode, toggleColorMode } = useColorMode();
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        if (window) {
+            setWidth(window.innerWidth);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+    }, []);
 
     return (
         <Box
@@ -21,7 +35,12 @@ export default function TextCard (props: { text: string }) {
                 py={3}
                 opacity={0.9}
             >
-                <CardBody>
+                <CardBody
+                    px={2}
+                    py={0}
+                    { ...width >= 480 && { px: 4, py: 2 } }
+                    { ...width >= 768 && { px: 6, py: 4 } }
+                >
                     <Text
                         fontFamily='Roboto'
                         fontSize='xl'
