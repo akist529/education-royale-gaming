@@ -108,4 +108,4 @@ export default function AboutUsPage () {
     );
 }
 
-export { getServerSideProps } from '@/chakra';
+// export { getServerSideProps } from '@/chakra';
