@@ -1,10 +1,14 @@
+// LOCAL COMPONENTS
 import Footer from "@/components/Footer/Footer";
-import { chakra, Box, Flex, Text, Image, useColorMode } from "@chakra-ui/react";
-import PageHeader from "@/components/PageHeader/PageHeader";
 import Layout from "@/components/Layout";
-import MathJackImg from '/public/images/mathjack.webp';
-import { useState, useEffect } from 'react';
+import PageHeader from "@/components/PageHeader/PageHeader";
 import TextCard from "@/components/TextCard/TextCard";
+// CHAKRA UI IMPORTS
+import { chakra, Box, Flex, Image, useColorMode } from "@chakra-ui/react";
+// LOCAL IMAGES
+import MathJackImg from '/public/images/mathjack.webp';
+// REACT LIBRARY IMPORTS
+import { useState, useEffect } from 'react';
 
 export default function MathJackPage () {
     const { colorMode, toggleColorMode } = useColorMode();

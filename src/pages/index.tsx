@@ -1,17 +1,20 @@
 'use client';
+// REACT LIBRARY IMPORTS
 import { useEffect, useState } from "react";
+// LOCAL COMPONENTS
 import Footer from "@/components/Footer/Footer";
-import { Heading, VStack, Text, Divider, Box, Card, CardBody, chakra } from '@chakra-ui/react';
-import { useColorMode } from "@chakra-ui/react";
+import Layout from '@/components/Layout/index';
+import PageHeader from "@/components/PageHeader/PageHeader";
+import PageSubHeader from "@/components/PageSubHeader/PageSubHeader";
+import ParallaxHeader from "@/components/ParallaxHeader/ParallaxHeader";
+import TextCard from "@/components/TextCard/TextCard";
+// CHAKRA UI IMPORTS
+import { VStack, Text, chakra, useColorMode } from '@chakra-ui/react';
+// LOCAL IMAGES
 import Image1 from '../../public/images/index-img1.jpg';
 import Image2 from '../../public/images/index-img2.jpg';
 import Image3 from '../../public/images/index-img3.jpg';
 import Image4 from '../../public/images/index-img4.jpg';
-import ParallaxHeader from "@/components/ParallaxHeader/ParallaxHeader";
-import TextCard from "@/components/TextCard/TextCard";
-import PageHeader from "@/components/PageHeader/PageHeader";
-import PageSubHeader from "@/components/PageSubHeader/PageSubHeader";
-import Layout from '@/components/Layout/index';
 
 export default function AboutUsPage () {
     const { colorMode, toggleColorMode } = useColorMode();

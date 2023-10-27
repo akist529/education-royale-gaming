@@ -1,14 +1,20 @@
+// LOCAL COMPONENTS
 import Footer from "@/components/Footer/Footer";
-import { chakra, Grid, GridItem, Link, IconButton, Card, CardHeader, CardBody, Text, Button, Heading, Divider, useColorMode, Input, Textarea, Flex, Image, Box, VStack, HStack } from "@chakra-ui/react";
-import ContactImage from '/public/images/contact-img.jpg';
-import styles from '@/styles/Index.module.scss';
-import PageHeader from "@/components/PageHeader/PageHeader";
 import Layout from "@/components/Layout";
-import { MdLocationOn, MdSend, MdEmail } from "react-icons/md";
+import PageHeader from "@/components/PageHeader/PageHeader";
+// CHAKRA UI IMPORTS
+import { chakra, Grid, GridItem, Link, IconButton, Text, Button, Heading, Divider, useColorMode, Input, Textarea, Flex, Box, VStack, HStack } from "@chakra-ui/react";
+// LOCAL IMAGES
+import ContactImage from '/public/images/contact-img.jpg';
+// CSS MODULES
+import styles from '@/styles/Index.module.scss';
+// REACT ICON IMPORTS
 import { BsPhoneFill } from "react-icons/bs";
-import { useState, useEffect } from 'react';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
+import { MdLocationOn, MdSend, MdEmail } from "react-icons/md";
+// REACT LIBRARY IMPORTS
+import { useState, useEffect } from 'react';
 
 export default function ContactPage () {
     const { colorMode, toggleColorMode } = useColorMode();

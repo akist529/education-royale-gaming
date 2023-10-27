@@ -1,4 +1,6 @@
+// CHAKRA UI IMPORTS
 import { Box, Heading, Divider, useColorMode } from '@chakra-ui/react';
+// CSS MODULES
 import styles from '@/styles/Index.module.scss';
 
 export default function ParallaxHeader (props: { img: string, heading: string }) {

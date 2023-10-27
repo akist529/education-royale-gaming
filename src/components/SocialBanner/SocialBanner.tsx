@@ -1,5 +1,6 @@
-import { chakra } from "@chakra-ui/react";
-import { Flex, Spacer, Heading, Box, Link, IconButton } from '@chakra-ui/react';
+// CHAKRA UI IMPORTS
+import { Flex, Spacer, Heading, Box, Link, IconButton, chakra } from '@chakra-ui/react';
+// REACT ICON IMPORTS
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 
 export default function SocialBanner () {

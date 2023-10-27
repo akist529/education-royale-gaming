@@ -1,12 +1,17 @@
-import { Flex, Spacer, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Text, VStack,  Link, Image, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
+// CHAKRA UI IMPORTS
+import { Flex, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Text, VStack, Link, Image, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
+// REACT LIBRARY IMPORTS
 import { useRef, RefObject } from 'react';
-import { IoMdMenu } from 'react-icons/io';
-import LogoLight from '../../../public/images/logo-light.png';
-import LogoDark from '../../../public/images/logo-dark.png';
-import { MdInfo, MdContactSupport } from 'react-icons/md';
-import { CgGames } from 'react-icons/cg';
+// NEXT.JS LIBRARY IMPORTS
 import NextLink from 'next/link';
+// REACT ICON IMPORTS
+import { CgGames } from 'react-icons/cg';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import { IoMdMenu } from 'react-icons/io';
+import { MdInfo, MdContactSupport } from 'react-icons/md';
+// LOCAL IMAGES
+import LogoDark from '../../../public/images/logo-dark.png';
+import LogoLight from '../../../public/images/logo-light.png';
 
 export default function MobileDrawer () {
     const btnRef = useRef() as RefObject<HTMLButtonElement>;

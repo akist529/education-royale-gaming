@@ -1,4 +1,6 @@
+// CHAKRA UI IMPORTS
 import { Box, Card, CardBody, Text, useColorMode } from '@chakra-ui/react';
+// REACT LIBRARY IMPORTS
 import { useState, useEffect } from 'react';
 
 export default function TextCard (props: { text: string }) {

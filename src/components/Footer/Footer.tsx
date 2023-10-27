@@ -1,7 +1,10 @@
-import { HStack, Text, chakra, useColorMode, Flex, Heading, Spacer, Box, Link, IconButton, Divider } from "@chakra-ui/react";
+// CHAKRA UI IMPORTS
+import { HStack, Text, chakra, useColorMode, Heading, Spacer, Link, IconButton, Divider } from "@chakra-ui/react";
+// REACT ICON IMPORTS
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { useState, useEffect } from 'react';
 import { ImMail } from "react-icons/im";
+// REACT LIBRARY IMPORTS
+import { useState, useEffect } from 'react';
 
 export default function Footer () {
     const { colorMode, toggleColorMode } = useColorMode();

@@ -1,19 +1,24 @@
 'use client';
-import { Flex, HStack, VStack, Image, Link, Button, IconButton, Text } from '@chakra-ui/react';
-import { Menu, MenuList, MenuButton, MenuItem, MenuGroup, MenuDivider, MenuOptionGroup, MenuItemOption } from '@chakra-ui/react';
-import { chakra, useColorMode } from '@chakra-ui/react';
-import LogoLight from '../../../public/images/logo-light.png';
-import LogoDark from '../../../public/images/logo-dark.png';
-import MobileDrawer from '../MobileDrawer/MobileDrawer';
-import { MdInfo, MdContactSupport } from 'react-icons/md';
-import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
-import { CgGames } from 'react-icons/cg';
-import NextLink from 'next/link';
+
+// CHAKRA UI IMPORTS
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { useRouter } from 'next/router';
-import { PiMathOperationsFill } from 'react-icons/pi';
-import styles from '@/styles/Index.module.scss';
+import { Flex, HStack, VStack, Image, Link, Button, IconButton, Text, Menu, MenuList, MenuButton, chakra, useColorMode } from '@chakra-ui/react';
+// LOCAL IMAGES
+import LogoDark from '../../../public/images/logo-dark.png';
+import LogoLight from '../../../public/images/logo-light.png';
+// LOCAL COMPONENTS
+import MobileDrawer from '../MobileDrawer/MobileDrawer';
+// REACT ICON IMPORTS
+import { CgGames } from 'react-icons/cg';
+import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { ImMail } from "react-icons/im";
+import { MdInfo, MdContactSupport } from 'react-icons/md';
+import { PiMathOperationsFill } from 'react-icons/pi';
+// NEXT.JS LIBRARY IMPORTS
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+// CSS MODULES
+import styles from '@/styles/Index.module.scss';
 
 export default function NavBar () {
     const { colorMode, toggleColorMode } = useColorMode();
