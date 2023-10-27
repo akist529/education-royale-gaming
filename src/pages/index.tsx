@@ -15,6 +15,8 @@ import Image1 from '../../public/images/index-img1.jpg';
 import Image2 from '../../public/images/index-img2.jpg';
 import Image3 from '../../public/images/index-img3.jpg';
 import Image4 from '../../public/images/index-img4.jpg';
+// NEXT.JS LIBRARY IMPORTS
+import Head from 'next/head';
 
 export default function AboutUsPage () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -34,6 +36,10 @@ export default function AboutUsPage () {
     
     return (
         <Layout>
+            <Head>
+                <title>Home - Education Royale Gaming</title>
+                <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+            </Head>
             <PageHeader
                 heading='About Us'
             />

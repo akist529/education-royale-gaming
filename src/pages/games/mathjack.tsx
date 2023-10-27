@@ -9,6 +9,8 @@ import { chakra, Box, Flex, Image, useColorMode } from "@chakra-ui/react";
 import MathJackImg from '/public/images/mathjack.webp';
 // REACT LIBRARY IMPORTS
 import { useState, useEffect } from 'react';
+// NEXT.JS LIBRARY IMPORTS
+import Head from 'next/head';
 
 export default function MathJackPage () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -28,6 +30,10 @@ export default function MathJackPage () {
 
     return (
         <Layout>
+            <Head>
+                <title>MathJack - Education Royale Gaming</title>
+                <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+            </Head>
             <chakra.main
                 backgroundColor={colorMode === 'dark' ? '#171923' : '#CBD5E0'}
                 backgroundImage={colorMode === 'dark' ? 'linear-gradient(135deg, #1A202C 25%, transparent 25%), linear-gradient(225deg, #1A202C 25%, transparent 25%), linear-gradient(45deg, #1A202C 25%, transparent 25%), linear-gradient(315deg, #1A202C 25%, #171923 25%)' : 'linear-gradient(135deg, #EDF2F7 25%, transparent 25%), linear-gradient(225deg, #EDF2F7 25%, transparent 25%), linear-gradient(45deg, #EDF2F7 25%, transparent 25%), linear-gradient(315deg, #EDF2F7 25%, #CBD5E0 25%)'}

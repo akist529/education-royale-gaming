@@ -15,6 +15,8 @@ import { ImMail } from "react-icons/im";
 import { MdLocationOn, MdSend, MdEmail } from "react-icons/md";
 // REACT LIBRARY IMPORTS
 import { useState, useEffect } from 'react';
+// NEXT.JS LIBRARY IMPORTS
+import Head from 'next/head';
 
 export default function ContactPage () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -34,6 +36,10 @@ export default function ContactPage () {
 
     return (
         <Layout>
+            <Head>
+                <title>Contact Us - Education Royale Gaming</title>
+                <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+            </Head>
             <PageHeader
                 heading='Contact'
             />
