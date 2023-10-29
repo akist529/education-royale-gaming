@@ -60,7 +60,7 @@ export default function AboutUsPage () {
                     className={styles.pageContent}
                 >
                     <TextCard
-                        text='At Education Royale Gaming, we believe in the power of play to transform the way we learn. Founded in 2023, our journey began with a simple mission: to make learning fun, engaging, and memorable for all ages. Since then, our family of board games has grown, but our core values remain unchanged.'
+                        text='At Education Royale Gaming, we believe in the power of play to transform the way we learn. Founded in 2023, our journey began with a simple mission: to make learning fun, engaging, and memorable for all ages. Since then, our family of games has grown, but our core values remain unchanged.'
                     />
                     { /* Photo by National Cancer Institute on Unsplash */ }
                     <ParallaxHeader
@@ -68,7 +68,7 @@ export default function AboutUsPage () {
                         heading='Our Philosophy'
                     />
                     <TextCard
-                        text='Education isn&apos;t just about textbooks and lectures; it&apos;s about sparking curiosity, fostering creativity, and encouraging hands-on exploration. We&apos;ve fused the thrill of board gaming with core educational principles to create an immersive learning experience. Whether it&apos;s history, math, science, or literature, our games inspire players to dive deep and discover the joy of learning.'
+                        text='Education isn&apos;t just about textbooks and lectures; it&apos;s about sparking curiosity, fostering creativity, and encouraging hands-on exploration. We&apos;ve fused the thrill of gaming with core educational principles to create an immersive learning experience. Whether it&apos;s history, math, science, or literature, our games inspire players to dive deep and discover the joy of learning.'
                     />
                     { /* Photo by Brooke Cagle on Unsplash */ }
                     <ParallaxHeader
@@ -92,7 +92,7 @@ export default function AboutUsPage () {
                         heading='Join Our Community'
                     />
                     <TextCard
-                        text='We invite you to become a part of our growing community. Whether you&apos;re a parent seeking new ways to engage your child, a teacher aiming to bring excitement to your classroom, or simply a board game aficionado, there&apos;s a place for you at Education Royale Gaming. Share your experiences, offer suggestions, and connect with like-minded individuals.'
+                        text='We invite you to become a part of our growing community. Whether you&apos;re a parent seeking new ways to engage your child, a teacher aiming to bring excitement to your classroom, or simply a game aficionado, there&apos;s a place for you at Education Royale Gaming. Share your experiences, offer suggestions, and connect with like-minded individuals.'
                     />
                     <VStack
                         px={2}
