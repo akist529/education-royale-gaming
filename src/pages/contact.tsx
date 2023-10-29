@@ -5,7 +5,7 @@ import PageHeader from "@/components/PageHeader/PageHeader";
 // CHAKRA UI IMPORTS
 import { chakra, Grid, GridItem, Link, IconButton, Text, Button, Heading, Divider, useColorMode, Input, Textarea, Flex, Box, VStack, HStack } from "@chakra-ui/react";
 // LOCAL IMAGES
-import ContactImage from '/public/images/contact-img.jpg';
+import ContactImage from '/public/images/contact-img.webp';
 // CSS MODULES
 import styles from '@/styles/Index.module.scss';
 // REACT ICON IMPORTS

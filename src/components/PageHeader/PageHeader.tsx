@@ -7,7 +7,6 @@ export default function PageHeader (props: { heading: string }) {
     return (
         <chakra.header>
             <Heading
-                fontFamily='Roboto Condensed'
                 letterSpacing={4}
                 textTransform='uppercase'
                 as='h1'

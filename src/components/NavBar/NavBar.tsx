@@ -2,10 +2,10 @@
 
 // CHAKRA UI IMPORTS
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Flex, HStack, VStack, Image, Link, Button, IconButton, Text, Menu, MenuList, MenuButton, chakra, useColorMode } from '@chakra-ui/react';
+import { Flex, HStack, VStack, Link, Button, IconButton, Text, Menu, MenuList, MenuButton, Image, chakra, useColorMode } from '@chakra-ui/react';
 // LOCAL IMAGES
-import LogoDark from '../../../public/images/logo-dark.png';
-import LogoLight from '../../../public/images/logo-light.png';
+import LogoDark from 'public/images/logo-dark.webp';
+import LogoLight from 'public/images/logo-light.webp';
 // LOCAL COMPONENTS
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 // REACT ICON IMPORTS
@@ -47,8 +47,8 @@ export default function NavBar () {
                     <Image
                         alt='Logo'
                         src={colorMode == 'light' ? LogoLight.src : LogoDark.src}
-                        width={48}
-                        height='auto'
+                        w={48}
+                        h='auto'
                     />
                 </Link>
                 <HStack

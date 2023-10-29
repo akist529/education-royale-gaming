@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:static": "serve ./out",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next build && next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "serve": "npx serve@latest out"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.0",
@@ -14,6 +17,7 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto-condensed": "^5.0.13",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -21,7 +25,9 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
+    "imagemin-optipng": "^8.0.0",
     "next": "13.4.19",
+    "next-optimized-images": "^2.6.2",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -32,7 +38,8 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "js-cookie": "^3.0.5"
+    "js-cookie": "^3.0.5",
+    "serve": "^14.2.1"
   },
   "engines": {
     "node": ">=15"

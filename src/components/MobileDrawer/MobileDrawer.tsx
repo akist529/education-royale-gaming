@@ -10,8 +10,8 @@ import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from
 import { IoMdMenu } from 'react-icons/io';
 import { MdInfo, MdContactSupport } from 'react-icons/md';
 // LOCAL IMAGES
-import LogoDark from '../../../public/images/logo-dark.png';
-import LogoLight from '../../../public/images/logo-light.png';
+import LogoDark from 'public/images/logo-dark.webp';
+import LogoLight from 'public/images/logo-light.webp';
 
 export default function MobileDrawer () {
     const btnRef = useRef() as RefObject<HTMLButtonElement>;

@@ -5,6 +5,8 @@ import theme from '@/theme';
 import { AnimatePresence } from 'framer-motion';
 // CHAKRA UI IMPORTS
 import { ChakraProvider } from '@chakra-ui/react';
+// FONT IMPORTS
+import '@fontsource/roboto-condensed/700.css';
 
 export default function MyApp({ Component, pageProps }: any) {
 

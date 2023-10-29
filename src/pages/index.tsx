@@ -11,10 +11,10 @@ import TextCard from "@/components/TextCard/TextCard";
 // CHAKRA UI IMPORTS
 import { VStack, Text, chakra, useColorMode } from '@chakra-ui/react';
 // LOCAL IMAGES
-import Image1 from '../../public/images/index-img1.jpg';
-import Image2 from '../../public/images/index-img2.jpg';
-import Image3 from '../../public/images/index-img3.jpg';
-import Image4 from '../../public/images/index-img4.jpg';
+import Image1 from '../../public/images/index-img1.webp';
+import Image2 from '../../public/images/index-img2.webp';
+import Image3 from '../../public/images/index-img3.webp';
+import Image4 from '../../public/images/index-img4.webp';
 // NEXT.JS LIBRARY IMPORTS
 import Head from 'next/head';
 
