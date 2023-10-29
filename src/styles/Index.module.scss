@@ -5,6 +5,24 @@
     min-height: '100vh';
 }
 
+.pageContent {
+    opacity: 0%;
+
+    animation-name: parallax-transition;
+    animation-duration: 0.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.parallaxContainer {
+    opacity: 0%;
+
+    animation-name: parallax-transition;
+    animation-duration: 0.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
 .parallax {
     width: 100%;
     height: 400px;
@@ -40,5 +58,13 @@
         background-attachment: fixed;
         background-size: cover;
         align-items: center;
+    }
+}
+
+@keyframes parallax-transition {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
     }
 }

@@ -9,6 +9,7 @@ export default function ParallaxHeader (props: { img: string, heading: string })
 
     return (
         <Box
+            className={styles.parallaxContainer}
             bgColor={ colorMode === 'dark' ? 'black' : 'white' }
             position='relative'
         >
