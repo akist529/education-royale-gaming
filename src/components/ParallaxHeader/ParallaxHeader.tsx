@@ -33,7 +33,6 @@ export default function ParallaxHeader (props: { img: string, heading: string })
                 maxWidth={650}
             >
                 <Heading
-                    fontFamily='Roboto Condensed'
                     as='h2'
                     size='2xl'
                     letterSpacing={4}

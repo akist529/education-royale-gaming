@@ -99,7 +99,6 @@ export default function AboutUsPage () {
                         pb={10} 
                     >
                         <Text
-                            fontFamily='Roboto Condensed'
                             fontSize='2xl'
                             fontWeight='800'
                             textAlign='center'
@@ -108,7 +107,6 @@ export default function AboutUsPage () {
                             { ...width >= 768 && { fontSize: '6xl' } }
                         >Thank you for choosing Education Royale Gaming.</Text>
                         <Text
-                            fontFamily='Roboto Condensed'
                             fontSize='xl'
                             fontWeight='300'
                             textAlign='center'

@@ -74,7 +74,6 @@ export default function ContactPage () {
                                     color={colorMode == 'dark' ? 'black' : 'white'}                            
                                 >
                                     <Heading
-                                        fontFamily='Roboto Condensed'
                                         as='h2'
                                         size='xl'
                                         letterSpacing={4}
@@ -83,7 +82,6 @@ export default function ContactPage () {
                                         wordBreak='break-word'
                                     >Invest with the Best</Heading>
                                     <Heading
-                                        fontFamily='Roboto Condensed'
                                         as='h3'
                                         size='l'
                                         letterSpacing={4}

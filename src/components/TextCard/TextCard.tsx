@@ -44,7 +44,6 @@ export default function TextCard (props: { text: string }) {
                     { ...width >= 768 && { px: 6, py: 4 } }
                 >
                     <Text
-                        fontFamily='Roboto'
                         fontSize='xl'
                         letterSpacing={1}
                     >{ text }</Text>

@@ -11,7 +11,8 @@ const config: ThemeConfig = {
 const theme = extendTheme({ 
   config,
   fonts: {
-    heading: `'Roboto Condensed', 'sans-serif'`
+    heading: `'Roboto Condensed', 'Arial', 'sans-serif'`,
+    body: `'Roboto', 'Arial', 'sans-serif'`
   }
 });
 
