@@ -11,6 +11,8 @@ import MathJackImg from '/public/images/mathjack.webp';
 import { useState, useEffect } from 'react';
 // NEXT.JS LIBRARY IMPORTS
 import Head from 'next/head';
+// CSS MODULES
+import styles from '@/styles/Index.module.scss';
 
 export default function MathJackPage () {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -47,28 +49,32 @@ export default function MathJackPage () {
                 <PageHeader
                     heading='MathJack'
                 /> 
-                <Flex
-                    direction={ width < 600 ? 'column' : 'row' }
-                    justify='center'
-                    align='center'
-                    gap={3}
-                    h='100%'
-                    p={3}
+                <chakra.div
+                    className={styles.pageContent}
                 >
-                    <Image
-                        alt='MathJack Logo'
-                        src={MathJackImg.src}
-                        w='90vw'
-                        h='auto'
-                        maxW={400}
-                    />
-                    <Box maxW={400}>
-                        <TextCard
-                            text='MathJack© is a revolutionary product which teaches children the fundamentals of mathematics.  Kids have so much fun, they don&apos;t realize they are learning!'
+                    <Flex
+                        direction={ width < 600 ? 'column' : 'row' }
+                        justify='center'
+                        align='center'
+                        gap={3}
+                        h='100%'
+                        p={3}
+                    >
+                        <Image
+                            alt='MathJack Logo'
+                            src={MathJackImg.src}
+                            w='90vw'
+                            h='auto'
+                            maxW={400}
                         />
-                    </Box>
-                </Flex>
-                <Footer />
+                        <Box maxW={400}>
+                            <TextCard
+                                text='MathJack© is a revolutionary product which teaches children the fundamentals of mathematics.  Kids have so much fun, they don&apos;t realize they are learning!'
+                            />
+                        </Box>
+                    </Flex>
+                    <Footer />
+                </chakra.div>
             </chakra.main>
         </Layout>
     );
