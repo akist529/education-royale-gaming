@@ -42,9 +42,10 @@ export default function ErrorPage () {
             <Layout>
                 <chakra.main
                     display='grid'
-                    gridTemplateRows='1fr auto'
+                    gridTemplateRows='auto 1fr auto auto'
                     height='100vh'
                 >
+                    <Divider variant='dashed' />
                     <chakra.div
                         h='100%'
                         minH='100%'
@@ -81,6 +82,7 @@ export default function ErrorPage () {
                             </Box>
                         </Box>
                     </chakra.div>
+                    <Divider variant='dashed' />
                     <Footer />
                 </chakra.main>
             </Layout>
