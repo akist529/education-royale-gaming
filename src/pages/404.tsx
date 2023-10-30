@@ -31,58 +31,59 @@ export default function ErrorPage () {
     }, []);
 
     return (
-        <Layout>
+        <chakra.div>
             <Head>
                 <title>404 - Page Not Found - Education Royale Gaming</title>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             </Head>
-            <chakra.main
-                display='grid'
-                gridTemplateRows='auto 1fr auto'
-                h='100vh'
-            >
-                <PageHeader
-                    heading='404 - Page Not Found'
-                />
-                <chakra.div
-                    backgroundColor={colorMode === 'dark' ? 'gray.800' : 'gray.100'}
-                    h='100%'
-                    minH='100%'
+            <PageHeader
+                heading='404 - Page Not Found'
+            />
+            <Layout>
+                <chakra.main
+                    display='grid'
+                    gridTemplateRows='1fr auto'
+                    height='100vh'
                 >
-                    { /* Photo by Amanda Jones on Unsplash */ }
-                    <Box
-                        className={colorMode === 'dark' ? [styles.parallax, styles.dark].join(' ') : [styles.parallax, styles.light].join(' ')}
-                        style={{ backgroundImage: `url(${img.src})` }}
+                    <chakra.div
                         h='100%'
+                        minH='100%'
                     >
+                        { /* Photo by Amanda Jones on Unsplash */ }
                         <Box
-                            w='95vw'
-                            maxWidth={650}                            
-                            py={2}
-                            bgColor={colorMode == 'dark' ? 'whiteAlpha.700' : 'blackAlpha.900'}
-                            color={colorMode == 'dark' ? 'black' : 'white'}                        
+                            className={colorMode === 'dark' ? [styles.parallax, styles.dark].join(' ') : [styles.parallax, styles.light].join(' ')}
+                            style={{ backgroundImage: `url(${img.src})` }}
+                            h='100%'
                         >
-                            <Heading
-                                as='h2'
-                                size='xl'
-                                letterSpacing={4}
-                                textAlign='center'
-                                textTransform='uppercase'
-                                wordBreak='break-word'
-                            >Oops!</Heading>
-                            <Heading
-                                as='h3'
-                                size='l'
-                                letterSpacing={4}
-                                textAlign='center'
-                                textTransform='uppercase'
-                                wordBreak='break-word'
-                            >The page you were looking for does not exist</Heading>
+                            <Box
+                                w='95vw'
+                                maxWidth={650}                            
+                                py={2}
+                                bgColor={colorMode == 'dark' ? 'whiteAlpha.700' : 'blackAlpha.900'}
+                                color={colorMode == 'dark' ? 'black' : 'white'}                        
+                            >
+                                <Heading
+                                    as='h2'
+                                    size='xl'
+                                    letterSpacing={4}
+                                    textAlign='center'
+                                    textTransform='uppercase'
+                                    wordBreak='break-word'
+                                >Oops!</Heading>
+                                <Heading
+                                    as='h3'
+                                    size='l'
+                                    letterSpacing={4}
+                                    textAlign='center'
+                                    textTransform='uppercase'
+                                    wordBreak='break-word'
+                                >The page you were looking for does not exist</Heading>
+                            </Box>
                         </Box>
-                    </Box>
-                </chakra.div>
-                <Footer />
-            </chakra.main>
-        </Layout>
+                    </chakra.div>
+                    <Footer />
+                </chakra.main>
+            </Layout>
+        </chakra.div>
     );
 }

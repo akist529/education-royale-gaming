@@ -31,49 +31,50 @@ export default function MathJackPage () {
     }, []);
 
     return (
-        <Layout>
+        <chakra.div>
             <Head>
                 <title>MathJack - Education Royale Gaming</title>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             </Head>
-            <chakra.main
-                backgroundColor={colorMode === 'dark' ? 'gray.800' : 'gray.100'}
-                minHeight='100vh'
-                display='grid'
-                gridTemplateRows='auto 1fr auto'
-            >
-                <PageHeader
+            <PageHeader
                     heading='MathJack'
                 /> 
-                <Divider variant='dashed' />
-                <chakra.div
-                    className={styles.pageContent}
+            <Divider variant='dashed' />
+            <Layout>
+                <chakra.main
+                    minHeight='100vh'
+                    display='grid'
+                    gridTemplateRows='auto 1fr auto'
                 >
-                    <Flex
-                        direction={ width < 600 ? 'column' : 'row' }
-                        justify='center'
-                        align='center'
-                        gap={3}
-                        h='100%'
-                        p={3}
+                    <chakra.div
+                        className={styles.pageContent}
                     >
-                        <Image
-                            alt='MathJack Logo'
-                            src={MathJackImg.src}
-                            w='90vw'
-                            h='auto'
-                            maxW={400}
-                        />
-                        <Box maxW={400}>
-                            <TextCard
-                                text='MathJack© is a revolutionary product which teaches children the fundamentals of mathematics.  Kids have so much fun, they don&apos;t realize they are learning!'
+                        <Flex
+                            direction={ width < 600 ? 'column' : 'row' }
+                            justify='center'
+                            align='center'
+                            gap={3}
+                            h='100%'
+                            p={3}
+                        >
+                            <Image
+                                alt='MathJack Logo'
+                                src={MathJackImg.src}
+                                w='90vw'
+                                h='auto'
+                                maxW={400}
                             />
-                        </Box>
-                    </Flex>
-                    <Divider variant='dashed' />
-                    <Footer />
-                </chakra.div>
-            </chakra.main>
-        </Layout>
+                            <Box maxW={400}>
+                                <TextCard
+                                    text='MathJack© is a revolutionary product which teaches children the fundamentals of mathematics.  Kids have so much fun, they don&apos;t realize they are learning!'
+                                />
+                            </Box>
+                        </Flex>
+                        <Divider variant='dashed' />
+                        <Footer />
+                    </chakra.div>
+                </chakra.main>
+            </Layout>
+        </chakra.div>
     );
 }
