@@ -1,9 +1,10 @@
 // CHAKRA UI IMPORTS
-import { Flex, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Text, VStack, Link, Image, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Text, VStack, HStack, Link, Image, Icon, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
 // REACT LIBRARY IMPORTS
 import { useRef, RefObject } from 'react';
 // NEXT.JS LIBRARY IMPORTS
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 // REACT ICON IMPORTS
 import { CgGames } from 'react-icons/cg';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
@@ -17,6 +18,7 @@ export default function MobileDrawer () {
     const btnRef = useRef() as RefObject<HTMLButtonElement>;
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
+    const router = useRouter();
 
     return (
         <Flex
@@ -39,6 +41,10 @@ export default function MobileDrawer () {
                 <DrawerOverlay />
                 <DrawerContent
                     alignItems='center'
+                    h='100vh'
+                    borderLeftWidth={6}
+                    borderLeftStyle='solid'
+                    borderLeftColor='red.500'
                 >
                     <DrawerCloseButton
                         justifySelf='end'
@@ -63,63 +69,115 @@ export default function MobileDrawer () {
                             </Button>
                         </Link>
                     </DrawerHeader>
-                    <DrawerBody w='100%'>
+                    <DrawerBody w='100%' h='100%' display='flex' flexDirection='column' alignItems='end'>
+                        <HStack
+                            justify='end'
+                            align='center'
+                            paddingBottom={6}
+                        >
+                            <Link
+                                href='https://www.facebook.com/'
+                                isExternal
+                            >
+                                <IconButton
+                                    variant='ghost'
+                                    aria-label='Facebook'
+                                    icon={<FaFacebookSquare size={26} />}
+                                    isRound
+                                />
+                            </Link>
+                            <Link
+                                href='https://twitter.com/'
+                                isExternal
+                            >
+                                <IconButton
+                                    variant='ghost'
+                                    aria-label='Twitter'
+                                    icon={<FaTwitterSquare size={26} />}
+                                    isRound
+                                />
+                            </Link>
+                            <Link
+                                href='https://www.instagram.com/'
+                                isExternal
+                            >
+                                <IconButton
+                                    variant='ghost'
+                                    aria-label='Instagram'
+                                    icon={<FaInstagramSquare size={26} />}
+                                    isRound
+                                />
+                            </Link>
+                            <Link
+                                href='https://www.linkedin.com/'
+                                isExternal
+                            >
+                                <IconButton
+                                    variant='ghost'
+                                    aria-label='LinkedIn'
+                                    icon={<FaLinkedin size={26} />}
+                                    isRound
+                                />
+                            </Link>
+                        </HStack>
                         <VStack
                             as='nav'
                             spacing={5}
+                            w='60%'
                         >
-                            <Text>Navigation</Text>
                             <Link
                                 as={NextLink}
                                 href='/'
                                 w='100%'
-                                _activeLink={{ color: useColorModeValue('violet.50', 'white') }}
+                                color={router.pathname === '/' ? 'red.500' : ''}
+                                display='flex'
+                                justifyContent='space-between'
+                                alignItems='center'
                             >
                                 <Button
-                                    leftIcon={<MdInfo size={26} />}
                                     variant='nav'
                                     onClick={onClose}
-                                    colorScheme='red.500'
                                 >About Us</Button>
+                                <Icon
+                                    as={MdInfo}
+                                    boxSize={26}
+                                ></Icon>
                             </Link>
-                            <Link as={NextLink} href='/games/mathjack' w='100%'>
+                            <Link
+                                as={NextLink}
+                                href='/games/mathjack'
+                                w='100%'
+                                color={router.pathname === '/games/mathjack' ? 'red.500' : ''}
+                                display='flex'
+                                justifyContent='space-between'
+                                alignItems='center'
+                            >
                                 <Button
-                                    leftIcon={<CgGames size={26} />}
                                     variant='nav'
                                     onClick={onClose}
                                 >MathJack ©</Button>
+                                <Icon
+                                    as={CgGames}
+                                    boxSize={26}
+                                ></Icon>
                             </Link>
-                            <Link as={NextLink} href='/contact' w='100%'>
+                            <Link
+                                as={NextLink}
+                                href='/contact'
+                                w='100%'
+                                color={router.pathname === '/contact' ? 'red.500' : ''}
+                                display='flex'
+                                justifyContent='space-between'
+                                alignItems='center'
+                            >
                                 <Button
-                                    leftIcon={<MdContactSupport size={26} />}
                                     variant='nav'
                                     onClick={onClose}
                                 >Contact</Button>
-                            </Link>
-                            <Text>Social Media</Text>
-                            <Link href='https://www.facebook.com/' isExternal w='100%'>
-                                <Button
-                                    leftIcon={<FaFacebookSquare size={26} />}
-                                    variant='nav'
-                                >Facebook</Button>
-                            </Link>
-                            <Link href='https://twitter.com/' isExternal w='100%'>
-                                <Button
-                                    leftIcon={<FaTwitterSquare size={26} />}
-                                    variant='nav'
-                                >Twitter</Button>
-                            </Link>
-                            <Link href='https://www.instagram.com/' isExternal w='100%'>
-                                <Button
-                                    leftIcon={<FaInstagramSquare size={26} />}
-                                    variant='nav'
-                                >Instagram</Button>
-                            </Link>
-                            <Link href='https://www.linkedin.com/' isExternal w='100%'>
-                                <Button
-                                    leftIcon={<FaLinkedin size={26} />}
-                                    variant='nav'
-                                >LinkedIn</Button>
+                                <Icon
+                                    as={MdContactSupport}
+                                    boxSize={26}
+                                ></Icon>
                             </Link>
                         </VStack>
                     </DrawerBody>
