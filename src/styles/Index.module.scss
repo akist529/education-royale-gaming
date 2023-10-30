@@ -1,3 +1,9 @@
+.body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
 .main {
     background-position: '96px 0, 96px 0, 0 0, 0 0';
     background-size: '96px 96px';

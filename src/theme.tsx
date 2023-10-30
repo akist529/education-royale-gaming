@@ -13,6 +13,14 @@ const theme = extendTheme({
   fonts: {
     heading: `'Roboto Condensed', 'Arial', 'sans-serif'`,
     body: `'Roboto', 'Arial', 'sans-serif'`
+  },
+  styles: {
+    global: {
+      'html, body': {
+        minHeight: '100%',
+        height: '100%'
+      }
+    }
   }
 });
 
