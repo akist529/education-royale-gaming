@@ -43,6 +43,7 @@ export default function ContactPage () {
             <PageHeader
                 heading='Contact'
             />
+            <Divider variant='dashed' />
             <chakra.main
                 backgroundColor={colorMode === 'dark' ? '#171923' : '#CBD5E0'}
                 backgroundImage={colorMode === 'dark' ? 'linear-gradient(135deg, #1A202C 25%, transparent 25%), linear-gradient(225deg, #1A202C 25%, transparent 25%), linear-gradient(45deg, #1A202C 25%, transparent 25%), linear-gradient(315deg, #1A202C 25%, #171923 25%)' : 'linear-gradient(135deg, #EDF2F7 25%, transparent 25%), linear-gradient(225deg, #EDF2F7 25%, transparent 25%), linear-gradient(45deg, #EDF2F7 25%, transparent 25%), linear-gradient(315deg, #EDF2F7 25%, #CBD5E0 25%)'}
@@ -298,8 +299,8 @@ export default function ContactPage () {
                                 </Box>
                             </VStack>
                         </Box>
-                        <Divider variant='dashed' />
                     </Box>
+                    <Divider variant='dashed' />
                     <Footer />
                 </chakra.div>
             </chakra.main>

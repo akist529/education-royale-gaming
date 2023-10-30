@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import TextCard from "@/components/TextCard/TextCard";
 // CHAKRA UI IMPORTS
-import { chakra, Box, Flex, Image, useColorMode } from "@chakra-ui/react";
+import { chakra, Box, Flex, Image, Divider, useColorMode } from "@chakra-ui/react";
 // LOCAL IMAGES
 import MathJackImg from '/public/images/mathjack.webp';
 // REACT LIBRARY IMPORTS
@@ -49,6 +49,7 @@ export default function MathJackPage () {
                 <PageHeader
                     heading='MathJack'
                 /> 
+                <Divider variant='dashed' />
                 <chakra.div
                     className={styles.pageContent}
                 >
@@ -73,6 +74,7 @@ export default function MathJackPage () {
                             />
                         </Box>
                     </Flex>
+                    <Divider variant='dashed' />
                     <Footer />
                 </chakra.div>
             </chakra.main>

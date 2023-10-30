@@ -9,7 +9,7 @@ import PageSubHeader from "@/components/PageSubHeader/PageSubHeader";
 import ParallaxHeader from "@/components/ParallaxHeader/ParallaxHeader";
 import TextCard from "@/components/TextCard/TextCard";
 // CHAKRA UI IMPORTS
-import { VStack, Text, chakra, useColorMode } from '@chakra-ui/react';
+import { VStack, Text, Divider, chakra, useColorMode } from '@chakra-ui/react';
 // LOCAL IMAGES
 import Image1 from '../../public/images/index-img1.webp';
 import Image2 from '../../public/images/index-img2.webp';
@@ -97,7 +97,9 @@ export default function AboutUsPage () {
                     <VStack
                         px={2}
                         pb={10} 
+                        backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
                     >
+                        <Divider variant='dashed' />
                         <Text
                             fontSize='2xl'
                             fontWeight='800'

@@ -14,7 +14,6 @@ export default function PageSubHeader (props: { heading: string }) {
                 textAlign='center'
                 p={5}
                 backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
-                opacity={0.8}
             >{ heading }</Heading>
             <Divider variant='dashed' />
         </chakra.div>

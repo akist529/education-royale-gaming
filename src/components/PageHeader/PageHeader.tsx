@@ -16,7 +16,6 @@ export default function PageHeader (props: { heading: string }) {
                 pt={24}
                 backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
             >{ heading }</Heading>
-            <Divider variant='dashed' />
         </chakra.header>
     );
 }

@@ -30,11 +30,6 @@ export default function Footer () {
             textAlign='center'
             backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
         >
-            <Divider
-                colorScheme='red'
-                size='20'
-                variant='dashed'
-            />
             <HStack maxWidth={600} mx='auto' py={6} justify='center' align='center'>
                 { width >= 380 && <Heading>Connect With Us</Heading> }
                 { width >= 380 && <Spacer /> }
