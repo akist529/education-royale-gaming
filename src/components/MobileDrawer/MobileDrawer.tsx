@@ -70,56 +70,6 @@ export default function MobileDrawer () {
                         </Link>
                     </DrawerHeader>
                     <DrawerBody w='100%' h='100%' display='flex' flexDirection='column' alignItems='end'>
-                        <HStack
-                            justify='end'
-                            align='center'
-                            paddingBottom={6}
-                        >
-                            <Link
-                                href='https://www.facebook.com/'
-                                isExternal
-                            >
-                                <IconButton
-                                    variant='ghost'
-                                    aria-label='Facebook'
-                                    icon={<FaFacebookSquare size={26} />}
-                                    isRound
-                                />
-                            </Link>
-                            <Link
-                                href='https://twitter.com/'
-                                isExternal
-                            >
-                                <IconButton
-                                    variant='ghost'
-                                    aria-label='Twitter'
-                                    icon={<FaTwitterSquare size={26} />}
-                                    isRound
-                                />
-                            </Link>
-                            <Link
-                                href='https://www.instagram.com/'
-                                isExternal
-                            >
-                                <IconButton
-                                    variant='ghost'
-                                    aria-label='Instagram'
-                                    icon={<FaInstagramSquare size={26} />}
-                                    isRound
-                                />
-                            </Link>
-                            <Link
-                                href='https://www.linkedin.com/'
-                                isExternal
-                            >
-                                <IconButton
-                                    variant='ghost'
-                                    aria-label='LinkedIn'
-                                    icon={<FaLinkedin size={26} />}
-                                    isRound
-                                />
-                            </Link>
-                        </HStack>
                         <VStack
                             as='nav'
                             spacing={5}

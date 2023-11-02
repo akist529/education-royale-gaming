@@ -164,65 +164,6 @@ export default function NavBar () {
                             size='lg'
                         /> }
                 </HStack>
-                <HStack
-                    spacing='0'
-                    display={{ base: 'none', md: 'flex' }}
-                >
-                    <Link
-                        href='https://www.facebook.com/'
-                        isExternal
-                    >
-                        <IconButton
-                            variant='ghost'
-                            aria-label='Facebook'
-                            icon={<FaFacebookSquare size={26} />}
-                            isRound
-                        />
-                    </Link>
-                    <Link
-                        href='https://twitter.com/'
-                        isExternal
-                    >
-                        <IconButton
-                            variant='ghost'
-                            aria-label='Twitter'
-                            icon={<FaTwitterSquare size={26} />}
-                            isRound
-                        />
-                    </Link>
-                    <Link
-                        href='https://www.instagram.com/'
-                        isExternal
-                    >
-                        <IconButton
-                            variant='ghost'
-                            aria-label='Instagram'
-                            icon={<FaInstagramSquare size={26} />}
-                            isRound
-                        />
-                    </Link>
-                    <Link
-                        href='https://www.linkedin.com/'
-                        isExternal
-                    >
-                        <IconButton
-                            variant='ghost'
-                            aria-label='LinkedIn'
-                            icon={<FaLinkedin size={26} />}
-                            isRound
-                        />
-                    </Link>
-                    <Link
-                        href='mailto:jblackburn@educationroyalegaming.com'
-                    >
-                        <IconButton
-                            variant='ghost'
-                            aria-label='Email'
-                            icon={<ImMail size={23} />}
-                            isRound
-                        />
-                    </Link>
-                </HStack>
             </Flex>
         </chakra.nav>
     )
