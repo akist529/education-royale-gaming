@@ -58,6 +58,20 @@
     }
 }
 
+.logoLarge {
+    position: relative;
+    transform: scale(200%);
+    top: 50px;
+    transition: 0.15s;
+}
+
+.logoSmall {
+    position: relative;
+    transform: scale(100%);
+    top: 0px;
+    transition: 0.15s;
+}
+
 @media only screen and (min-width: 992px) {
     .parallax {
         height: 500px;

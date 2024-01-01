@@ -1,4 +1,4 @@
-import { Heading, Divider, useColorMode, chakra } from "@chakra-ui/react";
+import { Heading, useColorMode, chakra } from "@chakra-ui/react";
 import Layout from '@/components/Layout/index';
 
 export default function PageHeader (props: { heading: string }) {
@@ -7,7 +7,7 @@ export default function PageHeader (props: { heading: string }) {
 
     return (
         <chakra.header
-            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+            backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
         >
             <Layout>
                 <Heading

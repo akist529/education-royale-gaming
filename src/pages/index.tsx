@@ -95,7 +95,7 @@ export default function AboutUsPage () {
                         />
                         <VStack
                             px={2}
-                            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+                            backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
                         >
                             <Divider variant='dashed' />
                             <Text

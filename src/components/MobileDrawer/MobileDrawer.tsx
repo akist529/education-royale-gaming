@@ -1,5 +1,5 @@
 // CHAKRA UI IMPORTS
-import { Flex, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Text, VStack, HStack, Link, Image, Icon, useDisclosure, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Button, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, VStack, Link, Image, Icon, useDisclosure, useColorMode } from "@chakra-ui/react";
 // REACT LIBRARY IMPORTS
 import { useRef, RefObject } from 'react';
 // NEXT.JS LIBRARY IMPORTS
@@ -7,7 +7,6 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 // REACT ICON IMPORTS
 import { CgGames } from 'react-icons/cg';
-import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { IoMdMenu } from 'react-icons/io';
 import { MdInfo, MdContactSupport } from 'react-icons/md';
 // LOCAL IMAGES

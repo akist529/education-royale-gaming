@@ -31,31 +31,28 @@ export default function MathJackPage () {
     }, []);
 
     return (
-        <chakra.div>
+        <>
             <Head>
                 <title>MathJack - Education Royale Gaming</title>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             </Head>
-            <PageHeader
-                    heading='MathJack'
-                /> 
-            <Divider variant='dashed' />
-            <Layout>
-                <chakra.main
-                    minHeight='100vh'
-                    display='grid'
-                    gridTemplateRows='auto 1fr auto'
-                >
-                    <chakra.div
+            <chakra.div minH='100vh' display='grid' gridTemplateRows='auto 1fr auto'>
+                <PageHeader heading='MathJack' /> 
+                <Layout>
+                    <chakra.main
                         className={styles.pageContent}
+                        display='grid'
+                        gridTemplateRows='auto 1fr auto'
+                        h='100%'
                     >
+                        <Divider variant='dashed' />
                         <Flex
                             direction={ width < 600 ? 'column' : 'row' }
                             justify='center'
                             align='center'
                             gap={3}
-                            h='100%'
                             p={3}
+                            h='100%'
                         >
                             <Image
                                 alt='MathJack Logo'
@@ -71,10 +68,10 @@ export default function MathJackPage () {
                             </Box>
                         </Flex>
                         <Divider variant='dashed' />
-                        <Footer />
-                    </chakra.div>
-                </chakra.main>
-            </Layout>
-        </chakra.div>
+                    </chakra.main>
+                </Layout>
+                <Footer />
+            </chakra.div>
+        </>
     );
 }
