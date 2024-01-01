@@ -15,12 +15,26 @@ import { PiMathOperationsFill } from 'react-icons/pi';
 // NEXT.JS LIBRARY IMPORTS
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
+// REACT LIBRARY IMPORTS
+import { useState, useEffect } from 'react';
 // CSS MODULES
 import styles from '@/styles/Index.module.scss';
 
 export default function NavBar () {
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const scrollEvent = () => {
+        console.log(window.scrollY)
+        setScrollPosition(window.scrollY)
+    }
+
+    useEffect(() => {
+        if (window) {
+            window.addEventListener('scroll', scrollEvent, false)
+        }
+    }, [])
 
     return (
         <chakra.nav
@@ -47,6 +61,7 @@ export default function NavBar () {
                         src={colorMode == 'light' ? LogoLight.src : LogoDark.src}
                         w={48}
                         h='auto'
+                        className={ scrollPosition < 80 ? styles.logoLarge : styles.logoSmall }
                     />
                 </Link>
                 <HStack
