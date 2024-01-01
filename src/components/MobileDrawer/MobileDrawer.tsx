@@ -20,9 +20,7 @@ export default function MobileDrawer () {
     const router = useRouter();
 
     return (
-        <Flex
-            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
-        >
+        <Flex>
             <IconButton
                 ref={btnRef}
                 variant='ghost'
@@ -44,6 +42,7 @@ export default function MobileDrawer () {
                     borderLeftWidth={6}
                     borderLeftStyle='solid'
                     borderLeftColor='red.500'
+                    backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
                 >
                     <DrawerCloseButton
                         justifySelf='end'
