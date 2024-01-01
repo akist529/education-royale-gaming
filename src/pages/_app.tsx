@@ -4,7 +4,7 @@ import theme from '@/theme';
 // FRAMER MOTION IMPORTS
 import { AnimatePresence } from 'framer-motion';
 // CHAKRA UI IMPORTS
-import { ChakraProvider, chakra } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 // FONT IMPORTS
 import '@fontsource/roboto-condensed/700.css';
 // CSS MODULES

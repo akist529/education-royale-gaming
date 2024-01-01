@@ -36,7 +36,7 @@ export default function TextCard (props: { text: string }) {
                 borderLeftColor='red.500'
                 py={3}
                 opacity={0.9}
-                backgroundColor={ colorMode === 'dark' ? 'gray.700' : 'gray.50' }
+                backgroundColor={ colorMode === 'dark' ? 'black' : 'gray.50' }
             >
                 <CardBody
                     px={2}

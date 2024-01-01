@@ -1,5 +1,5 @@
 // CHAKRA UI IMPORTS
-import { HStack, Text, chakra, useColorMode, Heading, Spacer, Link, IconButton, Divider } from "@chakra-ui/react";
+import { HStack, Text, chakra, useColorMode, Heading, Spacer, Link, IconButton } from "@chakra-ui/react";
 // REACT ICON IMPORTS
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
@@ -28,7 +28,7 @@ export default function Footer () {
             px={6}
             pb={6}
             textAlign='center'
-            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+            backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
         >
             <HStack maxWidth={600} mx='auto' py={6} justify='center' align='center'>
                 { width >= 380 && <Heading>Connect With Us</Heading> }

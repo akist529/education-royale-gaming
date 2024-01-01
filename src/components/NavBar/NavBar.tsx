@@ -10,8 +10,6 @@ import LogoLight from 'public/images/logo-light.webp';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 // REACT ICON IMPORTS
 import { CgGames } from 'react-icons/cg';
-import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
-import { ImMail } from "react-icons/im";
 import { MdInfo, MdContactSupport } from 'react-icons/md';
 import { PiMathOperationsFill } from 'react-icons/pi';
 // NEXT.JS LIBRARY IMPORTS
@@ -33,7 +31,7 @@ export default function NavBar () {
             left={0}
             right={0}
             top={0}
-            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+            backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
             opacity={0.9}
         >
             <Flex

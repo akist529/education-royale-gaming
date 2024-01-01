@@ -7,7 +7,7 @@ export default function PageSubHeader (props: { heading: string }) {
 
     return (
         <chakra.div
-            backgroundColor={colorMode === 'dark' ? 'gray.900' : 'gray.200'}
+            backgroundColor={colorMode === 'dark' ? 'black' : 'gray.200'}
         >
             <Layout>
                 <Heading

@@ -35,25 +35,24 @@ export default function ContactPage () {
     }, []);
 
     return (
-        <chakra.div>
+        <>
             <Head>
                 <title>Contact Us - Education Royale Gaming</title>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
             </Head>
-            <PageHeader
-                heading='Contact'
-            />
-            <Divider variant='dashed' />
-            <Layout>
-                <chakra.main>
-                    <chakra.div
+            <chakra.div display='grid' gridTemplateRows='auto 1fr auto' minH='100vh'>
+                <PageHeader heading='Contact' />
+                <Layout>
+                    <chakra.main
                         className={styles.pageContent}
+                        h='100%'
                     >
+                        <Divider variant='dashed' />
                         <Box
                             bgColor={ colorMode === 'dark' ? 'black' : 'white' }
                             position='relative'
+                            h='100%'
                         >
-                            <Divider variant='dashed' />
                             { /* Photo by Yannis H on Unsplash */ }
                             <Box
                                 className={colorMode === 'dark' ? [styles.parallax, styles.dark, styles.parallaxContainer].join(' ') : [styles.parallax, styles.light, styles.parallaxContainer].join(' ')}
@@ -61,7 +60,7 @@ export default function ContactPage () {
                                 h='100%'
                                 py={3}
                             >
-                                <VStack>
+                                <VStack justify='center' align='center' h='100%'>
                                     <Box
                                         w='95vw'
                                         maxWidth={650}                            
@@ -296,10 +295,10 @@ export default function ContactPage () {
                             </Box>
                         </Box>
                         <Divider variant='dashed' />
-                        <Footer />
-                    </chakra.div>
-                </chakra.main>
-            </Layout>
-        </chakra.div>
+                    </chakra.main>
+                </Layout>
+                <Footer />
+            </chakra.div>
+        </>
     );
 }
