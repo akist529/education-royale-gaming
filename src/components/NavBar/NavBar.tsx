@@ -23,16 +23,31 @@ import styles from '@/styles/Index.module.scss';
 export default function NavBar () {
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
-    const [scrollPosition, setScrollPosition] = useState(0);
+    const [logoPositionTop, setLogoPositionTop] = useState('0px');
+    const [logoPositionLeft, setLogoPositionLeft] = useState('0px');
+    const [logoTransform, setLogoTransform] = useState('scale(100%)')
 
-    const scrollEvent = () => {
-        console.log(window.scrollY)
-        setScrollPosition(window.scrollY)
+    const event = () => {
+        if (window.scrollY < 80 && window.innerWidth >= 1080) {
+            setLogoPositionTop('50px')
+            setLogoPositionLeft('0px')
+            setLogoTransform('scale(200%)')
+        } else if (window.scrollY < 80 && window.innerWidth < 1080 && window.innerWidth >= 768) {
+            setLogoPositionTop('25px')
+            setLogoPositionLeft('-25px')
+            setLogoTransform(`scale(${0.15 * window.innerWidth}%)`)
+        } else {
+            setLogoPositionTop('0px')
+            setLogoPositionLeft('0px')
+            setLogoTransform('scale(100%)')
+        }
     }
 
     useEffect(() => {
         if (window) {
-            window.addEventListener('scroll', scrollEvent, false)
+            window.addEventListener('scroll', event, false)
+            window.addEventListener('resize', event, false)
+            event()
         }
     }, [])
 
@@ -61,7 +76,11 @@ export default function NavBar () {
                         src={colorMode == 'light' ? LogoLight.src : LogoDark.src}
                         w={48}
                         h='auto'
-                        className={ scrollPosition < 80 ? styles.logoLarge : styles.logoSmall }
+                        position='relative'
+                        transform={logoTransform}
+                        top={logoPositionTop}
+                        left={logoPositionLeft}
+                        transition='0.15s'
                     />
                 </Link>
                 <HStack
